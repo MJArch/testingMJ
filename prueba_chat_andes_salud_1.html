@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andes Salud - Prueba de chat (sandbox)</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; background: #f4f6f9; color: #1b2a3a; }
+  header { background: #0b4f8a; color: #fff; padding: 20px 24px; }
+  main { max-width: 720px; margin: 32px auto; padding: 0 16px; }
+  .card { background: #fff; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+  code { background: #eef1f5; padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header><h1 style="margin:0;font-size:20px">Andes Salud - Página de prueba del chat</h1></header>
+<main>
+  <div class="card">
+    <p>Entorno de pruebas (sandbox). Abre el chat con el botón de la esquina inferior derecha.</p>
+    <p>Si no aparece, abre la consola del navegador (F12) y revisa errores de dominio no permitido.</p>
+  </div>
+</main>
+
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'es';
+
+			embeddedservice_bootstrap.init(
+				'00DWK000006jEcr',
+				'AS_Web_Sitio_Prueba',
+				'https://data-customization-1131--dev.sandbox.my.site.com/ESWASWebSitioP1791304573799',
+				{
+					scrt2URL: 'https://data-customization-1131--dev.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://data-customization-1131--dev.sandbox.my.site.com/ESWASWebSitioP1791304573799/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+</html>
